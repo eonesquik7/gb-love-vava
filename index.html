@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Para Valentina 💖</title>
   <style>
-    /* Fonte e base */
     * {
       margin: 0;
       padding: 0;
@@ -20,7 +19,6 @@
       position: relative;
     }
 
-    /* Corações flutuando */
     .heart {
       position: absolute;
       width: 20px;
@@ -29,7 +27,6 @@
       transform: rotate(45deg);
       animation: floatUp 10s infinite linear;
     }
-
     .heart::before,
     .heart::after {
       content: '';
@@ -39,38 +36,25 @@
       background: rgba(255, 105, 180, 0.4);
       border-radius: 50%;
     }
-
     .heart::before {
       top: -10px;
       left: 0;
     }
-
     .heart::after {
       left: -10px;
       top: 0;
     }
-
     @keyframes floatUp {
-      0% {
-        bottom: -10%;
-        opacity: 0;
-      }
-      50% {
-        opacity: 0.7;
-      }
-      100% {
-        bottom: 110%;
-        opacity: 0;
-      }
+      0% { bottom: -10%; opacity: 0; }
+      50% { opacity: 0.7; }
+      100% { bottom: 110%; opacity: 0; }
     }
 
-    /* Cabeçalho */
     header {
       text-align: center;
       padding: 50px 20px 20px;
       backdrop-filter: blur(8px);
     }
-
     h1 {
       font-size: 3.5em;
       color: #ff1493;
@@ -78,7 +62,6 @@
       text-shadow: 0 0 10px #fff;
     }
 
-    /* Texto romântico */
     .mensagem {
       text-align: center;
       margin: 30px auto;
@@ -90,14 +73,12 @@
       box-shadow: 0 0 20px rgba(255, 192, 203, 0.6);
       animation: fadeIn 3s ease;
     }
-
     .mensagem p {
       font-size: 1.4em;
       line-height: 1.8em;
       color: #b0006e;
     }
 
-    /* Galeria de fotos */
     .fotos {
       display: flex;
       justify-content: center;
@@ -105,20 +86,17 @@
       gap: 25px;
       margin: 40px 20px;
     }
-
     .fotos img {
       width: 300px;
       border-radius: 20px;
       box-shadow: 0 0 25px rgba(255, 105, 180, 0.6);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .fotos img:hover {
       transform: scale(1.05);
       box-shadow: 0 0 40px rgba(255, 20, 147, 0.8);
     }
 
-    /* Rodapé */
     footer {
       text-align: center;
       padding: 30px;
@@ -126,31 +104,20 @@
       color: #a3005d;
     }
 
-    /* Animações */
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
   </style>
 </head>
 <body>
-
-  <!-- Corações flutuando -->
-  <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="heart" style="left: 10%;"></div>
   <div class="heart" style="left: 25%; animation-delay: 2s;"></div>
   <div class="heart" style="left: 40%; animation-delay: 4s;"></div>
   <div class="heart" style="left: 55%; animation-delay: 6s;"></div>
   <div class="heart" style="left: 70%; animation-delay: 8s;"></div>
   <div class="heart" style="left: 85%; animation-delay: 10s;"></div>
 
-  <!-- Conteúdo principal -->
   <header>
     <h1>Valentina 💖</h1>
   </header>
@@ -165,13 +132,14 @@
   </section>
 
   <section class="fotos">
-    <img src="valentina1.png" alt="Valentina 1">
-    <img src="valentina2.png" alt="Valentina 2">
+    <!-- Cole o seu link da primeira imagem aqui -->
+    <img src="LINK_DA_PRIMEIRA_IMAGEM" alt="Valentina 1">
+    <!-- Cole o seu link da segunda imagem aqui -->
+    <img src="LINK_DA_SEGUNDA_IMAGEM" alt="Valentina 2">
   </section>
 
   <footer>
     Com carinho, de quem te admira mais do que palavras podem dizer. 💘
   </footer>
-
 </body>
 </html>
