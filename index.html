@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Para Valentina 💖</title>
   <style>
     * {
@@ -19,13 +19,17 @@
       position: relative;
     }
 
+    /* Estilo base do coração */
     .heart {
       position: absolute;
       width: 20px;
       height: 20px;
       background: rgba(255, 105, 180, 0.4);
       transform: rotate(45deg);
-      animation: floatUp 10s infinite linear;
+      animation: floatUp linear infinite;
+      opacity: 0;
+      /* Para evitar sobreposição do conteúdo principal */
+      pointer-events: none;
     }
     .heart::before,
     .heart::after {
@@ -44,10 +48,172 @@
       left: -10px;
       top: 0;
     }
+
+    /* Animação do coração subindo */
     @keyframes floatUp {
-      0% { bottom: -10%; opacity: 0; }
-      50% { opacity: 0.7; }
-      100% { bottom: 110%; opacity: 0; }
+      0% {
+        bottom: -10%;
+        opacity: 0;
+        transform: rotate(45deg) scale(0.8);
+      }
+      25% {
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+      }
+      75% {
+        opacity: 0.7;
+      }
+      100% {
+        bottom: 110%;
+        opacity: 0;
+        transform: rotate(45deg) scale(0.8);
+      }
+    }
+
+    /* Gerando vários corações com delays e posições diferentes */
+    /* Use classes para variar tempo, tamanho e posição */
+
+    /* Exemplo para 20 corações */
+    /* Modifique left, animation-duration e animation-delay */
+
+    .heart:nth-child(1) {
+      left: 5%;
+      animation-duration: 10s;
+      animation-delay: 0s;
+    }
+    .heart:nth-child(2) {
+      left: 12%;
+      animation-duration: 12s;
+      animation-delay: 2s;
+      width: 25px;
+      height: 25px;
+    }
+    .heart:nth-child(3) {
+      left: 20%;
+      animation-duration: 11s;
+      animation-delay: 1s;
+    }
+    .heart:nth-child(4) {
+      left: 28%;
+      animation-duration: 13s;
+      animation-delay: 3s;
+      width: 15px;
+      height: 15px;
+    }
+    .heart:nth-child(5) {
+      left: 35%;
+      animation-duration: 9s;
+      animation-delay: 4s;
+      width: 22px;
+      height: 22px;
+    }
+    .heart:nth-child(6) {
+      left: 42%;
+      animation-duration: 14s;
+      animation-delay: 2.5s;
+      width: 18px;
+      height: 18px;
+    }
+    .heart:nth-child(7) {
+      left: 50%;
+      animation-duration: 11s;
+      animation-delay: 5s;
+      width: 20px;
+      height: 20px;
+    }
+    .heart:nth-child(8) {
+      left: 57%;
+      animation-duration: 12s;
+      animation-delay: 3.5s;
+      width: 24px;
+      height: 24px;
+    }
+    .heart:nth-child(9) {
+      left: 64%;
+      animation-duration: 10s;
+      animation-delay: 4.5s;
+      width: 16px;
+      height: 16px;
+    }
+    .heart:nth-child(10) {
+      left: 70%;
+      animation-duration: 13s;
+      animation-delay: 6s;
+      width: 21px;
+      height: 21px;
+    }
+    .heart:nth-child(11) {
+      left: 75%;
+      animation-duration: 9s;
+      animation-delay: 5.5s;
+      width: 19px;
+      height: 19px;
+    }
+    .heart:nth-child(12) {
+      left: 80%;
+      animation-duration: 14s;
+      animation-delay: 7s;
+      width: 17px;
+      height: 17px;
+    }
+    .heart:nth-child(13) {
+      left: 85%;
+      animation-duration: 12s;
+      animation-delay: 6.5s;
+      width: 23px;
+      height: 23px;
+    }
+    .heart:nth-child(14) {
+      left: 90%;
+      animation-duration: 10s;
+      animation-delay: 7.5s;
+      width: 20px;
+      height: 20px;
+    }
+    .heart:nth-child(15) {
+      left: 95%;
+      animation-duration: 11s;
+      animation-delay: 8s;
+      width: 16px;
+      height: 16px;
+    }
+    .heart:nth-child(16) {
+      left: 8%;
+      animation-duration: 12s;
+      animation-delay: 8.5s;
+      width: 18px;
+      height: 18px;
+    }
+    .heart:nth-child(17) {
+      left: 22%;
+      animation-duration: 9s;
+      animation-delay: 9s;
+      width: 21px;
+      height: 21px;
+    }
+    .heart:nth-child(18) {
+      left: 38%;
+      animation-duration: 14s;
+      animation-delay: 9.5s;
+      width: 20px;
+      height: 20px;
+    }
+    .heart:nth-child(19) {
+      left: 62%;
+      animation-duration: 11s;
+      animation-delay: 10s;
+      width: 22px;
+      height: 22px;
+    }
+    .heart:nth-child(20) {
+      left: 78%;
+      animation-duration: 13s;
+      animation-delay: 10.5s;
+      width: 16px;
+      height: 16px;
     }
 
     header {
@@ -105,18 +271,39 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="heart" style="left: 10%;"></div>
-  <div class="heart" style="left: 25%; animation-delay: 2s;"></div>
-  <div class="heart" style="left: 40%; animation-delay: 4s;"></div>
-  <div class="heart" style="left: 55%; animation-delay: 6s;"></div>
-  <div class="heart" style="left: 70%; animation-delay: 8s;"></div>
-  <div class="heart" style="left: 85%; animation-delay: 10s;"></div>
+  <!-- Corações extras -->
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
 
   <header>
     <h1>Valentina 💖</h1>
@@ -124,20 +311,20 @@
 
   <section class="mensagem">
     <p>
-      Seu jeito único encanta a todos ao redor. <br>
-      Seu sorriso ilumina meu dia com uma alegria que só você tem. <br>
-      Seus cabelos são como uma cascata de luz que me fascina. <br>
-      A sua delicadeza e cuidado revelam a beleza do seu coração. <br>
-      Seu olhar expressa tudo aquilo que palavras não conseguem dizer. <br>
-      Seu nariz perfeito combina com a doçura do seu sorriso. <br>
-      Sua boca é um convite para os momentos mais felizes. <br>
+      Seu jeito único encanta a todos ao redor. <br />
+      Seu sorriso ilumina meu dia com uma alegria que só você tem. <br />
+      Seus cabelos são como uma cascata de luz que me fascina. <br />
+      A sua delicadeza e cuidado revelam a beleza do seu coração. <br />
+      Seu olhar expressa tudo aquilo que palavras não conseguem dizer. <br />
+      Seu nariz perfeito combina com a doçura do seu sorriso. <br />
+      Sua boca é um convite para os momentos mais felizes. <br />
       A suavidade da sua pele me faz sentir um carinho infinito. 💗
     </p>
   </section>
 
   <section class="fotos">
-    <img src="https://i.imgur.com/9zSnzQI.jpeg" alt="Valentina 1">
-    <img src="https://i.imgur.com/uSePEji.jpeg" alt="Valentina 2">
+    <img src="https://i.imgur.com/9zSnzQI.jpeg" alt="Valentina 1" />
+    <img src="https://i.imgur.com/uSePEji.jpeg" alt="Valentina 2" />
   </section>
 
   <footer>
