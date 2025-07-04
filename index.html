@@ -22,34 +22,32 @@
     /* Estilo base do coração */
     .heart {
       position: absolute;
-      width: 20px;
-      height: 20px;
+      width: 40px; /* maior */
+      height: 40px; /* maior */
       background: rgba(255, 105, 180, 0.4);
       transform: rotate(45deg);
       animation: floatUp linear infinite;
       opacity: 0;
-      /* Para evitar sobreposição do conteúdo principal */
       pointer-events: none;
     }
     .heart::before,
     .heart::after {
       content: '';
       position: absolute;
-      width: 20px;
-      height: 20px;
+      width: 40px; /* maior */
+      height: 40px; /* maior */
       background: rgba(255, 105, 180, 0.4);
       border-radius: 50%;
     }
     .heart::before {
-      top: -10px;
+      top: -20px;
       left: 0;
     }
     .heart::after {
-      left: -10px;
+      left: -20px;
       top: 0;
     }
 
-    /* Animação do coração subindo */
     @keyframes floatUp {
       0% {
         bottom: -10%;
@@ -73,147 +71,286 @@
       }
     }
 
-    /* Gerando vários corações com delays e posições diferentes */
-    /* Use classes para variar tempo, tamanho e posição */
-
-    /* Exemplo para 20 corações */
-    /* Modifique left, animation-duration e animation-delay */
-
+    /* Ajustes de tamanho para cada coração */
     .heart:nth-child(1) {
       left: 5%;
       animation-duration: 10s;
       animation-delay: 0s;
+      width: 50px;
+      height: 50px;
+    }
+    .heart:nth-child(1)::before,
+    .heart:nth-child(1)::after {
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      left: 0;
     }
     .heart:nth-child(2) {
       left: 12%;
       animation-duration: 12s;
       animation-delay: 2s;
-      width: 25px;
-      height: 25px;
+      width: 60px;
+      height: 60px;
+    }
+    .heart:nth-child(2)::before,
+    .heart:nth-child(2)::after {
+      width: 60px;
+      height: 60px;
+      top: -30px;
+      left: 0;
     }
     .heart:nth-child(3) {
       left: 20%;
       animation-duration: 11s;
       animation-delay: 1s;
+      width: 48px;
+      height: 48px;
+    }
+    .heart:nth-child(3)::before,
+    .heart:nth-child(3)::after {
+      width: 48px;
+      height: 48px;
+      top: -24px;
+      left: 0;
     }
     .heart:nth-child(4) {
       left: 28%;
       animation-duration: 13s;
       animation-delay: 3s;
-      width: 15px;
-      height: 15px;
+      width: 38px;
+      height: 38px;
+    }
+    .heart:nth-child(4)::before,
+    .heart:nth-child(4)::after {
+      width: 38px;
+      height: 38px;
+      top: -19px;
+      left: 0;
     }
     .heart:nth-child(5) {
       left: 35%;
       animation-duration: 9s;
       animation-delay: 4s;
-      width: 22px;
-      height: 22px;
+      width: 55px;
+      height: 55px;
+    }
+    .heart:nth-child(5)::before,
+    .heart:nth-child(5)::after {
+      width: 55px;
+      height: 55px;
+      top: -27.5px;
+      left: 0;
     }
     .heart:nth-child(6) {
       left: 42%;
       animation-duration: 14s;
       animation-delay: 2.5s;
-      width: 18px;
-      height: 18px;
+      width: 45px;
+      height: 45px;
+    }
+    .heart:nth-child(6)::before,
+    .heart:nth-child(6)::after {
+      width: 45px;
+      height: 45px;
+      top: -22.5px;
+      left: 0;
     }
     .heart:nth-child(7) {
       left: 50%;
       animation-duration: 11s;
       animation-delay: 5s;
-      width: 20px;
-      height: 20px;
+      width: 50px;
+      height: 50px;
+    }
+    .heart:nth-child(7)::before,
+    .heart:nth-child(7)::after {
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      left: 0;
     }
     .heart:nth-child(8) {
       left: 57%;
       animation-duration: 12s;
       animation-delay: 3.5s;
-      width: 24px;
-      height: 24px;
+      width: 58px;
+      height: 58px;
+    }
+    .heart:nth-child(8)::before,
+    .heart:nth-child(8)::after {
+      width: 58px;
+      height: 58px;
+      top: -29px;
+      left: 0;
     }
     .heart:nth-child(9) {
       left: 64%;
       animation-duration: 10s;
       animation-delay: 4.5s;
-      width: 16px;
-      height: 16px;
+      width: 40px;
+      height: 40px;
+    }
+    .heart:nth-child(9)::before,
+    .heart:nth-child(9)::after {
+      width: 40px;
+      height: 40px;
+      top: -20px;
+      left: 0;
     }
     .heart:nth-child(10) {
       left: 70%;
       animation-duration: 13s;
       animation-delay: 6s;
-      width: 21px;
-      height: 21px;
+      width: 52px;
+      height: 52px;
+    }
+    .heart:nth-child(10)::before,
+    .heart:nth-child(10)::after {
+      width: 52px;
+      height: 52px;
+      top: -26px;
+      left: 0;
     }
     .heart:nth-child(11) {
       left: 75%;
       animation-duration: 9s;
       animation-delay: 5.5s;
-      width: 19px;
-      height: 19px;
+      width: 48px;
+      height: 48px;
+    }
+    .heart:nth-child(11)::before,
+    .heart:nth-child(11)::after {
+      width: 48px;
+      height: 48px;
+      top: -24px;
+      left: 0;
     }
     .heart:nth-child(12) {
       left: 80%;
       animation-duration: 14s;
       animation-delay: 7s;
-      width: 17px;
-      height: 17px;
+      width: 44px;
+      height: 44px;
+    }
+    .heart:nth-child(12)::before,
+    .heart:nth-child(12)::after {
+      width: 44px;
+      height: 44px;
+      top: -22px;
+      left: 0;
     }
     .heart:nth-child(13) {
       left: 85%;
       animation-duration: 12s;
       animation-delay: 6.5s;
-      width: 23px;
-      height: 23px;
+      width: 56px;
+      height: 56px;
+    }
+    .heart:nth-child(13)::before,
+    .heart:nth-child(13)::after {
+      width: 56px;
+      height: 56px;
+      top: -28px;
+      left: 0;
     }
     .heart:nth-child(14) {
       left: 90%;
       animation-duration: 10s;
       animation-delay: 7.5s;
-      width: 20px;
-      height: 20px;
+      width: 50px;
+      height: 50px;
+    }
+    .heart:nth-child(14)::before,
+    .heart:nth-child(14)::after {
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      left: 0;
     }
     .heart:nth-child(15) {
       left: 95%;
       animation-duration: 11s;
       animation-delay: 8s;
-      width: 16px;
-      height: 16px;
+      width: 40px;
+      height: 40px;
+    }
+    .heart:nth-child(15)::before,
+    .heart:nth-child(15)::after {
+      width: 40px;
+      height: 40px;
+      top: -20px;
+      left: 0;
     }
     .heart:nth-child(16) {
       left: 8%;
       animation-duration: 12s;
       animation-delay: 8.5s;
-      width: 18px;
-      height: 18px;
+      width: 44px;
+      height: 44px;
+    }
+    .heart:nth-child(16)::before,
+    .heart:nth-child(16)::after {
+      width: 44px;
+      height: 44px;
+      top: -22px;
+      left: 0;
     }
     .heart:nth-child(17) {
       left: 22%;
       animation-duration: 9s;
       animation-delay: 9s;
-      width: 21px;
-      height: 21px;
+      width: 52px;
+      height: 52px;
+    }
+    .heart:nth-child(17)::before,
+    .heart:nth-child(17)::after {
+      width: 52px;
+      height: 52px;
+      top: -26px;
+      left: 0;
     }
     .heart:nth-child(18) {
       left: 38%;
       animation-duration: 14s;
       animation-delay: 9.5s;
-      width: 20px;
-      height: 20px;
+      width: 50px;
+      height: 50px;
+    }
+    .heart:nth-child(18)::before,
+    .heart:nth-child(18)::after {
+      width: 50px;
+      height: 50px;
+      top: -25px;
+      left: 0;
     }
     .heart:nth-child(19) {
       left: 62%;
       animation-duration: 11s;
       animation-delay: 10s;
-      width: 22px;
-      height: 22px;
+      width: 54px;
+      height: 54px;
+    }
+    .heart:nth-child(19)::before,
+    .heart:nth-child(19)::after {
+      width: 54px;
+      height: 54px;
+      top: -27px;
+      left: 0;
     }
     .heart:nth-child(20) {
       left: 78%;
       animation-duration: 13s;
       animation-delay: 10.5s;
-      width: 16px;
-      height: 16px;
+      width: 40px;
+      height: 40px;
+    }
+    .heart:nth-child(20)::before,
+    .heart:nth-child(20)::after {
+      width: 40px;
+      height: 40px;
+      top: -20px;
+      left: 0;
     }
 
     header {
@@ -240,8 +377,8 @@
       animation: fadeIn 3s ease;
     }
     .mensagem p {
-      font-size: 1.4em;
-      line-height: 1.8em;
+      font-size: 1.1em; /* menor */
+      line-height: 1.6em;
       color: #b0006e;
     }
 
